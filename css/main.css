@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: #000428;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.content {
+    margin: auto;
+    max-width: 400px;
+    width: 100%;
+    height: 80vh;
+    background-color: #F4FFFD;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    -webkit-box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.50);
+    box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.50);
+}
+
+.boton {
+    max-height:21px;
+    height: 100%;
+    background-color: #46237A;
+    color: #F4FFFD;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.2em;
+    padding: 0.7em 0.8em;
+    border-radius: 5px;
+
+    -webkit-box-shadow:2.5px 2.5px 1px 0px rgba(0,0,0,0.40);
+    -moz-box-shadow: 2.5px 2.5px 1px 0px rgba(0, 0, 0, 0.40);
+    box-shadow: 2.5px 2.5px 1px 0px rgba(0, 0, 0, 0.40);
+}
+.boton:hover{
+    background-color: #7FEFBD;
+    color: #46237A;
+    font-weight: 500;
+}
+#btn-edit{
+    color: #256EFF;
+    font-size: 1.7em;
+}
+#btn-delete{
+    color: #FF220C;
+    font-size: 1.7em;
+}
+#tabla{
+    max-width: 900px;
+    padding: 2em 2.2em;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.options-table{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+#tabla table{
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+    border-spacing: 0;
+}
+
+#tabla table th{
+    text-transform: uppercase;
+    background-color: #B8D8D8;
+}
+#tabla table tr:nth-child(2){
+    background-color: #EBF4FF;
+}
+#tabla table th,#tabla table td{
+    padding: 0.6em 1.2em;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+#form{
+    max-height: 400px;
+    max-width:400px ;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.formulario label{
+    text-align: right;
+    margin-right: 10px;
+    padding: 0.2em;
+}
+.formulario input{
+    height: 15px;
+    padding: 0.4em;
+    background-color: #C7FFDA;
+    border: 1px solid #7FEFBD;
+    color: #18314F;
+}
+.formulario select{
+    height: 30px;
+    background-color: #C7FFDA;
+    border: 1px solid #7FEFBD;
+    color: #18314F;
+}
+#btn-submit{
+    max-height: 47px;
+    height: 100%;
+    padding: 0.7em 0.8em;
+    border: none;
+    background-color: #46237A;
+    color: #F4FFFD;
+}
+#btn-submit:hover{
+    background-color: #7FEFBD;
+    color: #46237A;
+    font-weight: 500;
+    cursor: pointer;
+}
+.formulario{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(6,16.6%);
+    margin-top: 30px;
+    color: #18314F;
+    font-weight: 600;
+}
+#form-options{
+    grid-column: 1 / 2 span;
+    width:100%;
+    justify-content: space-evenly;
+}
+
+@media (min-height:550px){
+    .content{
+        height:200px;
+    }
+}
+@media (max-width:400px){
+    .content{
+        margin:auto 10px;
+        flex-direction: column;
+        height: 200px;
+    }
+    #tabla{
+        margin: auto 10px;
+        overflow-x: scroll;
+        height: 80vh;
+    }
+    #tabla table td{
+        display: inline-block;
+        width: 80%;
+        text-align: center;
+    }
+    #tabla table th{
+        display: none;
+    }
+    #tabla table tr{
+        text-align: center;
+    }
+    #tabla table td:nth-of-type(1){
+        font-size: 1.6em;
+    }
+}

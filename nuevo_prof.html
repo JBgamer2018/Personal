@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Taller CRUD</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content" id="form">
+            <form action="" method="POST" class="formulario">
+                <label for="cedula">Cedula:</label>
+                <input type="number" name="cedula">
+
+                <label for="nombre">Nombre:</label>
+                <input required type="text" name="nombre">
+
+                <label for="area">Area:</label>
+                <input type="text" name="area">
+
+                <label for="telefono">Telefono:</label>
+                <input type="number" name="telefono">
+
+                <label for="categoria">Categoria:</label>
+                <select name="categoria">
+                    <option value="none">Ninguna</option>
+                </select>
+                <div class="options" id="form-options">
+                    <a class="boton" href="crud_profesores.html">Cancelar</a>
+                    <input class="boton" id="btn-submit" type="submit" value="Guardar">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
